@@ -12,6 +12,7 @@ black = (0, 0, 0)
 white = (255, 255, 255)
 grey = (128, 128, 128)
 
+
 #SCREEN DIMENSIONS
 width = 700
 height = 600
@@ -21,3 +22,6 @@ blockSize = 20
  
 topLeft_x = (width - gameWidth) // 2
 topLeft_y = height - gameHeight - 50
+
+def Font(size, bold):
+    return(font = pygame.font.SysFont("Calibri", size, bold=bold))

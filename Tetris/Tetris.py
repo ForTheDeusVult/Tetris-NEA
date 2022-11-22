@@ -121,7 +121,7 @@ class Tetris:
     #engineer? yeah, i'm engiNEARING MY FUCKING LIMIT
     def draw_next_block(self, screen):
 
-        font = pygame.font.SysFont("Calibri", 30)
+        font = Font(30, False)
         label = font.render("Next Shape", 1, white)
 
         sx = topLeft_x + gameWidth + 50
@@ -135,7 +135,7 @@ class Tetris:
 
     def draw_stored_black(self, screen):
 
-        font = pygame.font.SysFont("Calibri", 30)
+        font = Font(30, False)
         label = font.render("Stored Shape", 1, white)
 
         sx = topLeft_x + gameWidth + 50
@@ -272,12 +272,12 @@ def start_game():
                     if p in game.block.image():
                         pygame.draw.rect(screen, shape_colors[game.block.color], [game.x + game.zoom * (j + game.block.x) + 1, game.y + game.zoom * (i + game.block.y) + 1, game.zoom - 2, game.zoom - 2])
     
-        score_font = pygame.font.SysFont("Calibri", 40)
+        score_font = Font(40, False)
         label = font.render("Score: " + str(game.score), True, white)
 
         screen.blit(label, (300, 0))
 
-        game_over_font = pygame.font.SysFont("Calibri", 25)
+        game_over_font = Font(25, False)
         game_over_label1 = font.render("Game Over!", True, white)
         game_over_label2 = font.render("Press ESC", True, white)
 
@@ -298,7 +298,7 @@ pygame.display.set_caption("Tetris - Normal Mode")
 run = True
 while run:
     screen.fill(black)
-    font = pygame.font.SysFont("Calibri", 30, bold = True)
+    font = Font(30, True)
     label = font.render("Press any key to start!", False, white)
 
     screen.blit(label, (10, 300))

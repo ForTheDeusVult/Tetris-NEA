@@ -6,9 +6,10 @@ class Button():
         self.font = font
         self.color = color
         self.input_text = text
-        self.text = self.font.render(self.input, True, self.color)
-        if self.image is None:
-            self.image = self.text
+        
+        self.text = self.font.render(self.input_text, True, self.color)
+        
+        self.image = self.text
         self.rect = self.image.get_rect(center = (self.x, self.y))
 
         def update(self, screen):
