@@ -1,4 +1,4 @@
-#GLOBAL VARIABLES
+import pygame
 
 #COLORS
 aqua = (0, 255, 255)
@@ -24,4 +24,4 @@ topLeft_x = (width - gameWidth) // 2
 topLeft_y = height - gameHeight - 50
 
 def Font(size, bold):
-    return(font = pygame.font.SysFont("Calibri", size, bold=bold))
+    return(pygame.font.SysFont("Calibri", size, bold))

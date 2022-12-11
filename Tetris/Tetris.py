@@ -8,7 +8,6 @@ from seven_bag import *
 #8  9  10 11
 #12 13 14 15
 
-#AAAAAAAAAAAAAAAAAAAAA
 shapes = [
     [[4, 5, 6, 7], [2, 6, 10, 14], [8, 9, 10, 11], [1, 5, 9, 13]], #I
     [[0, 4, 5, 6], [1, 2, 5, 9], [4, 5, 6, 10], [1, 5, 8, 9]], #J
@@ -21,10 +20,8 @@ shapes = [
 
 shape_colors = [aqua, navy, orange, yellow, green, purple, red]
 
-#fuck you
 Seven_bag = bag()
 
-#really fucking long class for some reason
 class block:
     x = 0
     y = 0
@@ -43,6 +40,7 @@ class block:
 
     def rotate(self):
         self.rotation = (self.rotation + 1) % len(shapes[self.type])
+        return
 
 class Tetris:
     level = 1
@@ -86,7 +84,6 @@ class Tetris:
     def load_next_block(self):
         self.block = self.next_block
 
-    #literally god lmao
     def intersect(self):
         intersection = False
         for i in range (4):
@@ -96,7 +93,6 @@ class Tetris:
                         intersection = True
         return intersection
 
-    #how the FUCK does this work
     def clear(self, level):
         lines = 0
         for i in range(1, self.height):
@@ -118,7 +114,6 @@ class Tetris:
             self.level += 1
             lines -= 10
 
-    #engineer? yeah, i'm engiNEARING MY FUCKING LIMIT
     def draw_next_block(self, screen):
 
         font = Font(30, False)
